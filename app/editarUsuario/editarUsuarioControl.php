@@ -26,11 +26,11 @@ if(!empty($_POST['nome']) && !empty($_POST['email']) && !empty($_POST['id']) && 
     //Verificando se ocorreu algum erro 
     if(!$result){
         die("Erro: ".$mysqli->error);
-    }else{
-        //Enviando para a index com mensagem de conta criada
-        echo "<script>alert('Usuário atualizado com sucesso!.');</script>";
-        echo "<script>location.href = '../listaUsuarios/listaUsuarios.php'</script>";
     }
+    
+    //Enviando para a index com mensagem de conta criada
+    echo "<script>alert('Usuário atualizado com sucesso!.');</script>";
+    echo "<script>location.href = '../listaUsuarios/listaUsuarios.php'</script>";
     
     //Limpando a query
     mysqli_free_result($result);

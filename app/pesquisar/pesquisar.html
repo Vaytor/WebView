@@ -32,12 +32,22 @@
         </div>  
     </nav>
     <div class="container">    
-        <form class="navbar-form navbar-left" role="search">
+        <form class="navbar-form navbar-left" role="search" method="POST" action="./pesquisarControl.php">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+                <label for="tipo_pesquisa">Pesquisar por:</label>
+                <select name="tipo_pesquisa" id="tipo_pesquisa">
+                    <option value="tudo">Tudo</option>
+                    <option value="nome">Nome</option>
+                    <option value="email">Email</option>
+                </select>
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
+
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search" name="pesquisa">
+            </div>
+
+            <button type="submit" class="btn btn-default">Pesquisar</button>
+        </form>
     </div>
     <script src="../../link/jquery/jquery.js"></script>
     <script src="../../link/bootstrap/js/bootstrap.min.js"></script>

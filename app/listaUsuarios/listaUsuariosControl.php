@@ -12,11 +12,17 @@ $query = "select * from seg_usuarios";
 $result = $mysqli->query($query);
 
 while($dados = mysqli_fetch_assoc($result)) {
-    
-    echo "<tr>
-            <th scope='row'><a href='../editarUsuario/editarUsuario.php?idUser=".$dados["id"]."'>Editar</a></th>
-            <td>".$dados["nome"]."</td>
-            <td>".$dados["ativo"]."</td>
-          </tr>";
+  
+  if($dados["ativo"] == 1){
+    $dados["ativo"] = "Sim";
+  }else{
+    $dados["ativo"] = "Não";
+  }
+
+  echo "<tr>
+          <td scope='col'><a href='../editarUsuario/editarUsuario.php?idUser=".$dados["id"]."'>Editar</a></td>
+          <td scope='col'>".$dados["nome"]."</td>
+          <td scope='col'>".$dados["ativo"]."</td>
+        </tr>";
 
 }
