@@ -24,7 +24,7 @@ if(!empty($_SESSION['html'])){
     echo $_SESSION['html'];
 
     echo '</tbody>
-        </table>
+        </table> 
     </div>';
 
     $_SESSION['html'] = "";
