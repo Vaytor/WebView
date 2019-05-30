@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../link/bootstrap/css/bootstrap.min.css">
  
-    <title>Pesquisar Usuários</title>
+    <title>Web Service Usuários</title>
 </head>
 <body>
     <nav class="navbar navbar-default sidebar" role="navigation">
@@ -15,14 +15,14 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>  
             <span class="icon-bar"></span>
             </button>      
         </div>
         <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
             <ul class="nav navbar-nav">
             <li ><a href="../home/home.php">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
-            <li ><a href="#">Pesquisar<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>        
+            <li ><a href="../pesquisar/pesquisar.php">Pesquisar<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>        
             <li ><a href="../listaUsuarios/listaUsuarios.php">Lista de Usuários<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>        
             <li ><a href="../webservice/webservice.php">Web Service<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-tags"></span></a></li>
             <li class="active"><a href="#">Serviço Local<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>        
@@ -32,7 +32,14 @@
         </div>  
     </nav>
     <div class="container">    
-        <span>Serviço Local</span>
+        <form class="navbar-form navbar-left" role="search" method="POST" action="./servicoLocalControl.php">
+    
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Pesquisar por id treinador" name="pesquisa">
+            </div>
+            
+            <button type="submit" class="btn btn-default">Pesquisar</button>
+        </form>
     </div>
     <script src="../../link/jquery/jquery.js"></script>
     <script src="../../link/bootstrap/js/bootstrap.min.js"></script>
